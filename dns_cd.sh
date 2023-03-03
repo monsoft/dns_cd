@@ -18,7 +18,7 @@ init() {
 
   # Login details
   CR_USERNAME="Crazy Domain Username"
-  MEM_PASSWORD="Crazy Domain Password"
+  CR_PASSWORD="Crazy Domain Password"
 
   # Variables
   DNS_ACME_RECORD='_acme-challenge'
@@ -34,7 +34,7 @@ login() {
     -H 'Origin: https://www.crazydomains.co.uk' \
     -H 'Referer: https://www.crazydomains.co.uk/members/login/' \
     -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36' \
-    --data-raw "ajax_token=${AJAX_TOKEN}&token=true&member_username=${CR_USERNAME}&member_password=${MEM_PASSWORD}" \
+    --data-raw "ajax_token=${AJAX_TOKEN}&token=true&member_username=${CR_USERNAME}&member_password=${CR_PASSWORD}" \
     --compressed) 
 }
 
