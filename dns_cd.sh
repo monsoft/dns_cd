@@ -45,10 +45,6 @@ get_domain_id() {
     -H 'X-Requested-With: XMLHttpRequest' \
     -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36' \
     --compressed | jq -r ".data.items[] | select(.domainName==\"$DOMAIN_NAME\") | .domainId")
-
-    #| jq --arg DOMAIN "$DOMAIN_NAMES" '.data.items[] | select(.domainName==$DOMAIN) | .domainId'
-
-    #echo "${DOMAIN_ID}"
 }
 
 get_dns_zone_records() {
@@ -60,8 +56,6 @@ get_dns_zone_records() {
     -H 'X-Requested-With: XMLHttpRequest' \
     --data-raw "ajax_token=${AJAX_TOKEN}&domain_id=${DOMAIN_ID}" \
     --compressed |jq -r '.data.dns_records[]')
-
-  # echo "${DNS_RECORDS_JSON}"
 }
 
 logout() {
