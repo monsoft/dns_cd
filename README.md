@@ -32,3 +32,7 @@ I run it in that way:
 ```
 Crazy Domain is not quick in the case of reloading DNS zone so it usually take around 10 minutes to new record appear in their name servers. I use option `--dnssleep 600` so script will wait 10 minutes before it checks if `_acme-challenge.domain.com` record was created.
 
+You can check this change on your own using `dig` command:
+```
+dig -t txt _acme-challenge.domain.com +short
+```
