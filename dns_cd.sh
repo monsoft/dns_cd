@@ -5,7 +5,8 @@
 # use it on your own risk.
 # 
 # Requires curl and jq
-# # Author: Irek Pelech
+# Author: Irek Pelech
+# https://seniorlinuxadmin.co.uk
 
 
 ####################  Private functions below ##################################
